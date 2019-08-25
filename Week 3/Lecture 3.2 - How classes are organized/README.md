@@ -77,3 +77,25 @@ At the top of the hierarchy, we find:
 | Any | The base type of all types. Methods: `==`, `!=`, `equals`, `hashCode` and `toString`.
 | AnyRef | The base type of all reference types. Alias of `java.lang.Object`.
 | AnyVal | The base type of all primitive types.
+
+### The `Nothing` type
+Nothing is at the bottom of the scala's type hierarchy. It Is a subtype of every other type. There is no value of type Nothing. 
+
+Why is that useful?
+- To signal abnormal termination
+- As an element type of empty collections. e.g. - `Set[Nothing]`
+
+### The `Null` type
+Every reference class type also has `null` as a value. The type of `null` is `Null`. `Null` is the subtype of every class that inherits from `Object`. It is incompatible with subtypes of `AnyVal`.
+``` scala
+val x = null            // x: Null
+val y: String = null    // y: String
+val z: Int = null       // error: Type mismatch
+```
+
+## Exceptions
+Scala's exception handling is similar to Java's. The expression 
+``` scala
+throw Exception
+```
+aborts evaluation with `Exception`. The type of exception is nothing.
