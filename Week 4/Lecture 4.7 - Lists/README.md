@@ -86,3 +86,4 @@ def insert(x: Int, xs: List[Int]): List[Int] = xs match {
     case y :: ys => if(x < y) x :: xs else y :: insert(x, ys)
 }
 ```
+

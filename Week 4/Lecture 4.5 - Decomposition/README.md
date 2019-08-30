@@ -88,3 +88,5 @@ class Sum(e1: Expr, e2: Expr) extends Expr {
   override def eval: Int = e1.eval + e2.eval
 }
 ```
+But what happens if we want to display expressions now? We have to define new methods in all subclasses.
+
