@@ -79,3 +79,12 @@ object ListFun extends App {
   println(nums span (x => x > 0))        // (List(2, 6, 3),List(-1, -2, 4))
 }
 ```
+
+## Exercise
+
+Write a function pack that packs consecutive duplicates oflist elements of elements into sublists. For instance
+``` scala
+pack(List("a", "a", "a", "b", "c", "c", "a"))
+```
+should give
+``
